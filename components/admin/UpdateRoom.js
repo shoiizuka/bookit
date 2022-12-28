@@ -3,7 +3,7 @@ import React, {useState,useEffect} from 'react'
 import { useRouter } from 'next/router';
 import Image from "next/image";
 import ButtonLoader from '../layout/ButtonLoader'
-import { Loader } from '../layout/Loader';//追加
+import  Loader  from '../layout/Loader';//追加
 import {useDispatch,useSelector} from 'react-redux'
 import {toast} from 'react-toastify'
 
