@@ -40,6 +40,8 @@ export default NextAuth({
       }
     })
   ],
+  secret:process.env.NEXTAUTH_SECRET,//認証エラー出るので独自追加
+
   callbacks:{//もう一回使う時jwtを使うから必要
     jwt:async({token,user})=>{
       user && (token.user = user)
