@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const rooms = require( '../data/rooms');//データの読み込み.jsonじゃなくていい？
 
 //ウェブDBに変更
-mongoose.connect('mongodb+srv://bookit:bookit@cluster0.yvazsab.mongodb.net/?retryWrites=true&w=majority',{
+mongoose.connect('mongodb+srv://bookit:bookit@cluster0.yvazsab.mongodb.net/bookit?retryWrites=true&w=majority',{
 })
 //mongodb://localhost:27017/bookit
 

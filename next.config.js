@@ -1,7 +1,7 @@
 module.exports = {
   env:{
     DB_LOCAL_URI: 'mongodb://localhost:27017/bookit',//モンゴdbのローカルと接続
-    DB_URI:'mongodb+srv://bookit:bookit@cluster0.yvazsab.mongodb.net/?retryWrites=true&w=majority',//モンゴリアル接続
+    DB_URI:'mongodb+srv://bookit:bookit@cluster0.yvazsab.mongodb.net/bookit?retryWrites=true&w=majority',//モンゴリアル接続
 
     //stripeApi
     STRIPE_API_KEY:'pk_test_51Jz1MRJwZi44U7BLyIR2BHfqsX1ShGzlZL1yJWNbNY46W8Nmc561aEXI6YCE40BCVMX0QXhK9mM3Pld62rY28d5L00lnc6qH4Q',
