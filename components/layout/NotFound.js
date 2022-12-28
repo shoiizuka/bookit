@@ -1,0 +1,18 @@
+//404のコンポーネント
+import React from "react";
+import Link from "next/link";
+
+const NotFound = () =>{
+  return(
+    <div className="page-not-found-wrapper"
+    >
+      <h1 id='title_404'>404</h1>
+      <h3 id="description_404">ページが見つかりません<br/><br/>
+        <Link href='/'>ホームに戻る</Link>
+      </h3>
+
+    </div>
+  )
+}
+
+export default NotFound
