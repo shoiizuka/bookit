@@ -25,7 +25,8 @@ module.exports = {
     SMTP_FROM_EMAIL: 'noreply@bookit.com',//一時的？
     
     //デプロイ用
-    NEXTAUTH_URL: 'https://bookit-shoiizuka.vercel.app'
+    NEXTAUTH_URL: 'https://bookit-shoiizuka.vercel.app',
+    NEXTAUTH_SECRET:'eyah0rE3PmXFgf2B+IoKWEIEHXP/exER1XsjSKTI/FA='
 
 
 
