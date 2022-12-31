@@ -138,7 +138,7 @@ const AllBookings = () =>{
 
       "products":[//請求書に表示されない！！！！
         {
-          "quantity":`${booking.dayOfStay}`,
+          "quantity":`${booking.daysOfStay}`,
           "description":`${booking.room.name}`,
           "tax-rate": 0,
           "price":`${booking.room.pricePerNight}`,

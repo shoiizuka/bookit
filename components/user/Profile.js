@@ -30,7 +30,7 @@ const Profile =() =>{
 
   //更新用//セレクターとは？
   //ユーザをロードユーザに　ロードをアップデートロードに
-  const { user:loadedUser , loading } =  useSelector(state=>state.auth)
+  const { user:loadedUser , loading } =  useSelector(state=>state.loadedUser)
   const { error , isUpdated , loading:updateLoading } =  useSelector(state=>state.user)
 
   useEffect(()=>{

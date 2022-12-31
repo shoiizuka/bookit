@@ -26,7 +26,7 @@ const bookingSchema = new mongoose.Schema({
     type:Number,
     require:true,
   },
-  dayOfStay:{//滞在日
+  daysOfStay:{//滞在日
     type:Number,
     require:true,
   },

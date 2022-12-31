@@ -43,7 +43,7 @@ const BookingDetails = () =>{
             <h4 className="mb-4">Booking Info</h4>
             <p><b>Check In:</b>{new Date(booking.checkInDate).toLocaleString('ja-JP')}</p>
             <p><b>Check Out:</b> {new Date(booking.checkOutDate).toLocaleString('ja-JP')}</p>
-            <p><b>Days of Stay:</b> {booking.dayOfStay}</p>
+            <p><b>Days of Stay:</b> {booking.daysOfStay}</p>
 
             <hr />
 
@@ -87,7 +87,7 @@ const BookingDetails = () =>{
                 </div>
 
                 <div className="col-4 col-lg-3 mt-4 mt-lg-0">
-                  <p>{booking.dayOfStay} Day(s)</p>
+                  <p>{booking.daysOfStay} Day(s)</p>
                 </div>
               </div>
             </div>

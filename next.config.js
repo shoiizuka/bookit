@@ -3,12 +3,18 @@ module.exports = {
     DB_LOCAL_URI: 'mongodb://localhost:27017/bookit',//モンゴdbのローカルと接続
     DB_URI:'mongodb+srv://bookit:bookit@cluster0.yvazsab.mongodb.net/bookit?retryWrites=true&w=majority',//モンゴリアル接続
 
-    //stripeApi
+    //stripeApi本番モード
+    // STRIPE_API_KEY:'',
+    // STRIPE_SECRET_KEY:'',
+    
+    //stripeApiテストモード
     STRIPE_API_KEY:'pk_test_51Jz1MRJwZi44U7BLyIR2BHfqsX1ShGzlZL1yJWNbNY46W8Nmc561aEXI6YCE40BCVMX0QXhK9mM3Pld62rY28d5L00lnc6qH4Q',
     STRIPE_SECRET_KEY:'sk_test_51Jz1MRJwZi44U7BLbrGEuDfgNWPAmILKWWzNlYQ7zVkicHYGBIlBqHHyTQyaid7e18GHuHAbzAbMRwmpDAgGi0Ar00I34NTQ25',
-    //ターミナル操作
-    STRIPE_WEBHOOK_SECRET:'whsec_gHKSczrt46g7fCTAbhXP9lqRmy9HDeAd',
-    // 'whsec_72f4debb69ec2440b17b790a221c24312ca98ea57853e5366415ad5d0988d460',
+
+    //本番用
+    // STRIPE_WEBHOOK_SECRET:'whsec_gHKSczrt46g7fCTAbhXP9lqRmy9HDeAd',
+    //ターミナル開発用
+    STRIPE_WEBHOOK_SECRET:'whsec_72f4debb69ec2440b17b790a221c24312ca98ea57853e5366415ad5d0988d460',
 
 
     //クラウド写真api接続

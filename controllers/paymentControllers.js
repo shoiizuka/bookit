@@ -63,7 +63,7 @@ const webhookCheckout = catchAsyncErrors(async (req,res,) =>{
 
       //DBカラム
       const room = session.client_reference_id;//?
-      const user = (await User.findOne({emeil: session.customer_email})).id;
+      const user = (await User.findOne({email: session.customer_email})).id;
       const amountPaid = session.amount_total / 100//ドル計算で掛けてた
       const paymentInfo = {//boControlleの項目
         id: session.payment_intent,//ストライプの項目
@@ -73,7 +73,7 @@ const webhookCheckout = catchAsyncErrors(async (req,res,) =>{
       const checkOutDate = session.metadata.checkOutDate;
       const daysOfStay = session.metadata.daysOfStay
 
-      //新しい予約作成　bookingContコピペ
+      //新しい予約作成　bookingContコピペこれ何で必要なの？
       const booking = await Booking.create({
         room,
         user,//user単体で良い
@@ -85,9 +85,7 @@ const webhookCheckout = catchAsyncErrors(async (req,res,) =>{
         paidAt: Date.now(),
       })
     
-      res.status(200).json({//bookingデータベースに保存
-        success:true,
-      })
+      res.status(200).json({ success:true, })
     }
     
   } catch (error) {

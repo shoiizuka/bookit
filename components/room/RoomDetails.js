@@ -26,7 +26,7 @@ import getStripe from "../../utils/getStripe";
 const RoomDetails = () =>{
   const [checkInDate , setCheckInDate] = useState();//カレンダー機能
   const [checkOutDate , setCheckOutDate] = useState();
-  const [dayOfStay, setDaysOfStay] = useState();
+  const [daysOfStay, setDaysOfStay] = useState();
   const [paymentLoading, setPaymentLoading] = useState(false);//決済機能
   const router = useRouter(); //遷移機能
 
@@ -66,7 +66,7 @@ const RoomDetails = () =>{
       checkInDate,
       checkOutDate,
       amountPaid:90,//一時的
-      dayOfStay,
+      daysOfStay,
       paymentInfo:{
         id:'STRIPE_PAYMENT_ID',//ストライプのidになる
         status:'STRIPE_PAYMENT_STATUS',//ストライプのidになる
@@ -84,17 +84,17 @@ const RoomDetails = () =>{
       
     } catch (error) {
       //確認
-      console.log*(error.responce)
+      console.log(error.responce)
     }
   }
 
   //決済処理
   const bookRoom = async(id , pricePerNight)=>{
     setPaymentLoading(true)//予約完了したらtrueに
-    const amount = pricePerNight * dayOfStay;
+    const amount = pricePerNight * daysOfStay;
     try {
       //ルームID,チェックインはなぜ必要？
-      const link = `/api/checkout_session/${id}?checkInDate=${checkInDate.toISOString()}&checkOutDate=${checkOutDate.toISOString()}&dayOfStay=${dayOfStay}`
+      const link = `/api/checkout_session/${id}?checkInDate=${checkInDate.toISOString()}&checkOutDate=${checkOutDate.toISOString()}&daysOfStay=${daysOfStay}`
 
       const {data} = await axios.get(link,{params:{amount}})//全部決まった後の最終データ＋金額
 
@@ -199,7 +199,7 @@ const RoomDetails = () =>{
                       className="btn btn-block py-3 booking-btn"
                       onClick={()=>bookRoom(room._id, room.pricePerNight)}//ここでroomidと金額を渡す
                       disabled={bookingLoading || paymentLoading ? true : false}//ボタンロードを使用不可に
-                      >Pay - ${dayOfStay * room.pricePerNight}
+                      >Pay - ${daysOfStay * room.pricePerNight}
                       </button>
                     }
                   </div>
